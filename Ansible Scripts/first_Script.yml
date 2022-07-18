@@ -1,0 +1,26 @@
+---
+
+- name: install tomcat server 
+  hosts: all
+  become: true
+
+  tasks :
+    - name: install java
+      yum:
+        name: java
+        state: latest
+
+     - name: download tomcat 
+       get_url:
+         url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.81/bin/apache-tomcat-8.5.81.tar.gz
+         dest: /usr/local
+
+     - name: extract the tomat packages
+       unarchive:
+        src: /usr/local/apache-tomcat-8.5.81.tar.gz
+        dest: /usr/local
+        remote_src: yes
+
+      - name: start tomcat services
+          shell: nohup /usr/loal/apache-tomcat-8.5.81/bin/startup.sh
+          
