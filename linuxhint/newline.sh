@@ -1,6 +1,6 @@
 #! /bin/bash
 
-echo "ashu mor"
+echo "ashu hero"
 
 echo -n "hello" # helloworld 1 hi line me pring ho jayenge because of -n option
 
