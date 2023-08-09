@@ -12,7 +12,7 @@ chmod +x # will give execute permission to owner, group any user
 
 cat > file.txt  
 
-# when you execute the about script it will allow you to write some text and will save it in text.txt tile. 
+# when you execute the above script it will allow you to write some text and will save it in text.txt tile. 
 # to come out of this press ctrl+D
 # it will over write the word "cat" 
 
@@ -32,7 +32,47 @@ cat << creative
 this is here doc delimiter 
 creative 
 
+# Q - Write a script which will take multiple names as input and print as we say ?
+
+#! /bin/bash
+
+echo "Enter name : "
+
+read -a names 
+
+echo "Names : ${names[0]}, ${names[1]}, ${names[2]}, ${names[3]}"
+
+echo "test if git repo will sync with Azure repo or not"
+
+# Q - Bash Parameters 
+
+#! /bin/bash
+
+echo $0 $1 $2 $3 
+
+args=("$@")
+
+echo ${args[0]} ${args[1]} ${args[2]}
+
+echo $@
+
+echo $#
+
+# Q - Conditional Statements 
+
 # if else statement. 
+
+#! /bin/bash
+
+count=9 
+
+if [ $count -eq 9 ]
+
+then 
+
+    echo "condition is true"
+
+fi
 
 #! /bin/bash
 
@@ -53,6 +93,8 @@ fi
 
 #another script using and operator
 
+#! /bin/bash
+
 count=10
 
 age=20
@@ -63,3 +105,14 @@ then
     echo 'statement is true'
 
 fi
+
+# Q - Multi line comment ?
+
+#! /bin/bash
+
+: '
+My name is ashish 
+Your name is somehting
+All these lines are commented 
+'
+echo "This is multiline commenting"
