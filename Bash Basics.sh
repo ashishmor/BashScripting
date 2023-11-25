@@ -116,3 +116,48 @@ Your name is somehting
 All these lines are commented 
 '
 echo "This is multiline commenting"
+
+# Q - New Line ?
+
+#! /bin/bash
+
+echo "ashu hero"
+
+echo -n "hello" # helloworld 1 hi line me pring ho jayenge because of -n option
+
+echo "world"
+
+echo "ashu" "lalu" "nupur" # string concatenate hogi 
+
+# Q - Write a oddeven script ?
+
+#! /bin/bash
+
+echo "Provide a number : "
+
+read number 
+
+if [ $((number % 2)) -eq 0 ] ; then 
+
+echo " number is even number "
+
+else 
+
+echo "number is a odd number "
+
+fi
+
+# 11 Aug 23 
+
+# Q - For loop 
+
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+    # if a is equal to 5 break the loop
+    if [ $a == 5 ]
+    then
+        break
+    fi
+    # Print the value
+    echo "Iteration no $a"
+done
