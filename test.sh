@@ -1,10 +1,8 @@
-a=0 
+# read multiple names 
 
-while [ $a -lt 10 ]
+echo " write names"
 
-do 
-    echo $a 
+read -a names 
 
-    a = $a + 1
+echo "Names : ${names[1]}, ${names[2]} "
 
-done 
