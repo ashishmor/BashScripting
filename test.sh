@@ -1,8 +1,2 @@
-# read multiple names 
-
-echo " write names"
-
-read -a names 
-
-echo "Names : ${names[1]}, ${names[2]} "
+echo "testing from ec2 instance "
 
